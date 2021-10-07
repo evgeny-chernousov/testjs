@@ -8,6 +8,10 @@ class Vehicle {
             this.seats = seats
         }
     }
+
+    getInfo(){
+        alert(String(this.make) + " has " + String(this.seats) + " seats")
+    }
 }
 
 class Track extends Vehicle{
@@ -18,15 +22,10 @@ class Track extends Vehicle{
         }
         else{
             this.max_load = max_load
-        }
-        
+        }   
+    }
+
+    getInfo(){
+        alert(String(this.make) + " has " + String(this.seats) + " seats and "+String(this.max_load) + " max load")
     }
 }
-
-var car = new Vehicle ('Mers', 4)
-
-var cat = new Track ('Cat', 0, -1000)
-
-
-alert("The track has "+String(cat.max_load) + " max load and " + String(cat.seats) + " seats")
-
